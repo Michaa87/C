@@ -51,11 +51,11 @@ PersonList* exitElevator (Elevator *elevator) {
 
 
 PersonList* enterElevator (Elevator *elevator, PersonList *list) {
- int capacity = elevator ->capacity;
+ int capacity   = elevator ->capacity;
  int occupation = 0, modif =0;
 
- PersonList *temp = elevator ->persons; //la liste de personnes dans la cabine 
- PersonList *copy = elevator ->persons;
+ PersonList *temp   = elevator ->persons; //la liste de personnes dans la cabine 
+ PersonList *copy   = elevator ->persons;
  elevator ->persons = NULL;
 
  while (temp != NULL){
@@ -81,7 +81,7 @@ PersonList* enterElevator (Elevator *elevator, PersonList *list) {
 
 void stepElevator (Building *building) {
  int currentFloor = building ->elevator ->currentFloor;
- int targetFloor = building ->elevator ->targetFloor;
+ int targetFloor  = building ->elevator ->targetFloor;
 
  if (currentFloor > targetFloor) {
 	building ->elevator ->currentFloor = currentFloor-1;
